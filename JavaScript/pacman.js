@@ -1,6 +1,3 @@
-/* canvas = document.getElementById('gameCanvas')
-let ctx = canvas.getContext('2d')*/
-
 let gameData = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1],
     [1,2,2,2,2,2,1,2,2,2,2,2,1],
@@ -16,12 +13,11 @@ let gameData = [
 const wall = 1;
 const coin = 2;
 const ground = 3;
-/*const pacman = 5; */
 
 let map;
 let pacman = {
-x: 6,
-y: 4,
+x: 7,
+y: 5,
 direction: 'right'
 };
 function createTiles(data) {

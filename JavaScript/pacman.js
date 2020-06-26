@@ -1,5 +1,5 @@
-let canvas = document.getElementById('gameCanvas')
-let ctx = canvas.getContext('2d')
+/* canvas = document.getElementById('gameCanvas')
+let ctx = canvas.getContext('2d')*/
 
 let gameData = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -16,7 +16,7 @@ let gameData = [
 const wall = 1;
 const coin = 2;
 const ground = 3;
-const pacman = 5;
+/*const pacman = 5; */
 
 let map;
 let pacman = {

@@ -28,13 +28,6 @@ let ghost = {
     direction: 'right'
     };
 
-/*let ghost2 = {
-x: 7,
-y: 5,
-direction: 'right'
-};
-*/
-
 function createTiles(data) {
     let tilesArray = [];
     for (let row of data) {

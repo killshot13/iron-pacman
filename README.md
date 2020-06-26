@@ -9,7 +9,7 @@ More importantly, I will be using techniques that employ DOM manipulation. This 
 
 I will primarily use Microsoft Visual Studio and the Google Developer Console to render and debug my code. 
 This is one of the largest projects I have ever attempted alone; nonetheless, I anticipate the successful creation of a viable working model of the iconic Pac-Man game.
-The game is currently projected to be deployed on my website @ https://safethishome.com/applications/pac-man-game/
+The game is currently deployed at https://killshot13.github.io/ironhack-js-canvas-pacman/
 
 Wish me luck!
 

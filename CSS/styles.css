@@ -1,0 +1,34 @@
+* {padding: 0; margin: 0; }
+            
+.gameCanvas { background: #999; display: block; margin: 0 auto; }
+
+.tile {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+.wall {
+  background-color: blue;
+  border: 2px solid cornflowerblue;
+}
+.coin {
+  background-color: yellow;
+  border-radius: 50%;
+  transform: scale(0.3);
+}
+.pacman {
+  background-image: url('../images/pacman.png');
+}
+
+.left {
+  background-image: url('../images/pacman-left.png');
+}
+
+.up {
+  background-image: url('../images/pacman-up.png');
+}
+
+.down {
+  background-image: url('../images/pacman-down.png');
+}

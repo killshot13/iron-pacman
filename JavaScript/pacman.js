@@ -1,11 +1,11 @@
 let gameData = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1],
     [1,2,2,2,2,2,1,2,2,2,2,2,1],
-    [1,2,1,1,1,2,1,2,1,1,1,2,1],
-    [1,2,1,2,2,2,2,2,2,2,1,2,1],
+    [1,2,1,2,1,2,1,2,1,2,1,2,1],
+    [1,2,1,4,2,2,2,2,2,2,1,2,1],
     [1,2,2,2,1,1,5,1,1,2,2,2,1],
     [1,2,1,2,2,2,2,2,2,2,1,2,1],
-    [1,2,1,1,2,2,1,2,2,1,1,2,1],
+    [1,2,1,2,1,2,1,2,1,2,1,2,1],
     [1,2,2,2,2,2,1,2,2,2,2,2,1],
     [1,1,1,1,1,1,1,1,1,1,1,1,1]
 ];
@@ -15,11 +15,26 @@ const coin = 2;
 const ground = 3;
 
 let map;
+
 let pacman = {
+x: 6,
+y: 4,
+direction: 'right'
+};
+
+let ghost = {
+    x: 3,
+    y: 3,
+    direction: 'right'
+    };
+
+/*let ghost2 = {
 x: 7,
 y: 5,
 direction: 'right'
 };
+*/
+
 function createTiles(data) {
     let tilesArray = [];
     for (let row of data) {
@@ -32,9 +47,12 @@ function createTiles(data) {
                     tile.classList.add('coin');
                 } else if (col == ground) {
                     tile.classList.add('ground');
-                } else if (col == pacman) {
+                } else if (col == 5) {
                     tile.classList.add('pacman');
-            tile.classList.add(pacman.direction);
+                    tile.classList.add(pacman.direction);
+                } else if (col == 4) {
+                    tile.classList.add('ghost');
+                    tile.classList.add(ghost.direction);
             }
             tilesArray.push(tile);
         }
@@ -59,37 +77,61 @@ function eraseMap() {
 
 function moveDown() {
     pacman.direction = 'down';
+    if (gameData[pacman.y+1][pacman.x] == 4) {
+        gameOver();
+    }
     if (gameData[pacman.y+1][pacman.x] !== wall) {
         gameData[pacman.y][pacman.x] = ground;
         pacman.y = pacman.y + 1 ;
-        gameData[pacman.y][pacman.x] = pacman;
+        gameData[pacman.y][pacman.x] = 5;
+        return true;
+    } else {
+        return false;
     }
 }
 
 function moveUp() {
     pacman.direction = 'up';
+    if (gameData[pacman.y-1][pacman.x] == 4) {
+        gameOver();
+    }
     if (gameData[pacman.y-1][pacman.x] !== wall) {
         gameData[pacman.y][pacman.x] = ground;
         pacman.y = pacman.y - 1;
-        gameData[pacman.y][pacman.x] = pacman;
+        gameData[pacman.y][pacman.x] = 5;
+        return true;
+    } else {
+        return false;
     }
 }
 
 function moveLeft() {
     pacman.direction = 'left';
+    if (gameData[pacman.y][pacman.x-1] == 4) {
+        gameOver();
+    }
     if (gameData[pacman.y][pacman.x-1] !== wall) {
         gameData[pacman.y][pacman.x] = ground;
         pacman.x = pacman.x - 1 ;
-        gameData[pacman.y][pacman.x] = pacman;
+        gameData[pacman.y][pacman.x] = 5;
+        return true;
+    } else {
+        return false;
     }
 }
 
 function moveRight() {
     pacman.direction = 'right';
+    if (gameData[pacman.y][pacman.x+1] == 4) {
+        gameOver();
+    }
     if (gameData[pacman.y][pacman.x+1] !== wall) {
         gameData[pacman.y][pacman.x] = ground;
         pacman.x = pacman.x + 1 ;
-        gameData[pacman.y][pacman.x] = pacman;
+        gameData[pacman.y][pacman.x] = 5;
+        return true;
+    } else {
+        return false;
     }
 }
 

@@ -41,3 +41,9 @@ body {
 .down {
   background-image: url('../images/pacman-down.png');
 }
+
+.ghost, .gleft, .gup, .gdown {
+  background-image: url('https://www.clipartmax.com/png/middle/463-4633959_8-bit-clipart-pac-man-green-pac-man-ghost.png');
+  background-size: cover;
+  background-position: center;
+}

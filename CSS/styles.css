@@ -43,7 +43,7 @@ body {
 }
 
 .ghost, .gleft, .gup, .gdown {
-  background-image: url('https://www.clipartmax.com/png/middle/463-4633959_8-bit-clipart-pac-man-green-pac-man-ghost.png');
+  background-image: url('../images/blinky.png');
   background-size: cover;
   background-position: center;
 }

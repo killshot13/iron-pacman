@@ -74,4 +74,5 @@ function ghostie(direction) {
 function gameOver() {
     alert("Game Over");
 }
+
 ghostie(ghostLeft);

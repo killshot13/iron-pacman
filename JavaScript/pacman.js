@@ -130,18 +130,22 @@ function moveRight() {
 
 function setupKeyboardControls() {
     document.addEventListener('keydown', function (e) {
-        if (e.keyCode === 37) {        
+        if (e.keyCode === 37 || e.keyCode === 65) {        
             moveLeft();
-        } else if (e.keyCode === 38) {  
+        } else if (e.keyCode === 38 || e.keyCode === 87) {  
             moveUp();
-        } else if (e.keyCode === 39) {   
+        } else if (e.keyCode === 39 || e.keyCode === 83) {   
             moveRight();
-        } else if (e.keyCode === 40) {  
+        } else if (e.keyCode === 40 || e.keyCode === 68) {  
             moveDown();
         }
     eraseMap();
     drawMap();
     });
+}
+
+function gameOver() {
+    alert("Game Over");
 }
 
 function startGame() {

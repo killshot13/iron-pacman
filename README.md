@@ -10,10 +10,8 @@ More importantly, I used techniques that employ DOM manipulation. This is in con
 I primarily used Microsoft Visual Studio and the Google Developer Console to render and debug my code. 
 This was one of the largest projects I have ever attempted alone; nonetheless, I achieved the successful creation of a viable working model of the iconic Pac-Man game. 
 Credit for assistance goes to my instructors Juan and Niko, who assisted with both my starter code and the integration of the ghost feature.
-The reason the game is called IRON PAC-MAN is that it is practically impossible to beat, as you will see.
+The reason the game is called IRON PAC-MAN is that it is practically impossible to beat in the traditional sense, as you will see.
 The game is currently deployed at: https://killshot13.github.io/iron-pacman/
-
-Wish me luck!
 
 AT A GLANCE:
 Technologies Employed -- 

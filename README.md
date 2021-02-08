@@ -1,6 +1,6 @@
 # IRON PAC-MAN
 
-## AT A GLANCE: Technologies Employed
+### AT A GLANCE: Technologies Employed
 
 * HTML5
 * CSS3
